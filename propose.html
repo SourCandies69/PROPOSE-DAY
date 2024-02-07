@@ -16,16 +16,18 @@
             background-repeat: no-repeat;
             margin: 0;
             padding: 0; 
-         }
+            height: 100vh; /* Ensure full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         #letter{
             text-align: center;
-            position: absolute;
-            width: 550px;
-            height: 750px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             background-image: url("ltbg.jpg");
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
         }
 
         #gradualText {
@@ -58,10 +60,11 @@
         button{
             padding: 10px 20px;
             font-size: 16px;
+            color: fuchsia;
             font-weight: bold;
             background-color: #6adcff; 
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
             box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
                 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
@@ -74,38 +77,12 @@
         Well as you know I am really bad at expressing and saying the things I feel but atleast for today I want you to know how much I love you.
         Sweta jab se tum aur mai relationalship me aaye hai tab se kuch chize hai jo thik huyi hai ha kuch kharaab bhi huyi hai but why would I see the bad side lets just focus on good things. Jesa mene pehle bhi kaha tha ki mere din ki shuruaat tumse hoti hai aur end bhi tumse hi hai. Poore din me aisa koi time nhi hota jab tumhare baare me nhi sochta aur ichha nhi hoti ki kaash is samay tumhare saath hota and you know what your magic is working wonderfully because  I really love you so much baby and fall in love with you more and more everyday. Tum haste huye bhot pyaari lagti ho sacchi aisa nhi ki normally nhi lagti, mujhe to tum har time pyaari lagti ho lekin ha hasti ho to ek alag si chamak aa jaati hai tumhare chehre pe. Dekho babu mai perfect to nhi ho lekin ha better banne ki kosis karta hu khudse hi ki tumhe khush rakh saku tum bhot important ho mere liye. I am not dating you just for fun, I really wanna marry you and live my remaining life with you and our kids happily and peacefully.
         </div><br>
-        <p>Your Dumb Smxy Boyfriend <br><span>STWEPID</span></p>
-        <button onclick="openPage()">❗❓❗</button><br>
+        <p>Your Dumb Smxy Boyfriend <br><span>STEWPID</span></p>
+        <button onclick="openPage()"><---TOUCH ME---></button><br>
     </div>
     
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var textElement = document.getElementById('gradualText');
-            var text = textElement.textContent;
-            var letters = text.split('');
-            textElement.textContent = '';
-
-            // Add span elements for each letter
-            letters.forEach(function(letter) {
-                var span = document.createElement('span');
-                span.textContent = letter;
-                span.style.opacity = '0';
-                textElement.appendChild(span);
-            });
-
-            // Animate the appearance of each letter
-            var spans = textElement.querySelectorAll('span');
-            var index = 0;
-            var intervalId = setInterval(function() {
-                if (index < spans.length) {
-                    spans[index].style.opacity = '1';
-                    index++;
-                } else {
-                    clearInterval(intervalId); // Stop the animation when all letters are shown
-                }
-            }, 30); // Interval for gradual appearance (adjust as needed)
-        });
         function openPage() {
             window.location.href = 'ask.html';
         }
