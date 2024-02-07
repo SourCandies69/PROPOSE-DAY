@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPEN ME</title>
+    <style>
+        body{
+            background-image: url("ss.png");
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .circular-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Make the button circular */
+            background-color: #fff; /* Button background color */
+            color: #ce00b6; /* Button text color */
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px; /* Center the text vertically */
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.74);
+        }
+    </style>
+</head>
+<body>
+    <button class="circular-button" onclick="openPage()">Click Me</button>
+    <script>
+        function openPage() {
+            window.location.href = 'propose.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <style>
+        body{
+            background-image: url("ss.png");
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #container{
+            padding: 25%;
+            text-align: center;
+            font-size: 10px;
+        }
+        .circular-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Make the button circular */
+            background-color: #fff; /* Button background color */
+            color: #ce00b6; /* Button text color */
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100px; /* Center the text vertically */
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.74);
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>I WANNA HAVE YOU FOR THE REST OF MY LIFE<br>SAY YES SAY YES</h1>
+        <div>
+           <button class="circular-button" onclick="openPage1()">YES</button>
+            </div><br>
+         <div>
+            <button class="circular-button" onclick="openPage2()">NO</button>
+        </div>
+    </div>
+    <script>
+        function openPage1() {
+            window.location.href = 'index.html';
+        }
+        function openPage2() {
+            window.location.href = 'ask.html';
+        }
+    </script>
+</body>
+</html>
