@@ -54,13 +54,17 @@
 
         function decreaseButtonSize() {
             var yesButtonSize = parseInt(window.getComputedStyle(yesButton).getPropertyValue('width'));
+            var yesButtonSize = parseInt(window.getComputedStyle(yesButton).getPropertyValue('height'));
             var noButtonSize = parseInt(window.getComputedStyle(noButton).getPropertyValue('width'));
+            var noButtonSize = parseInt(window.getComputedStyle(noButton).getPropertyValue('height'));
 
             // Increase size of YES button
             yesButton.style.width = (yesButtonSize + 10) + 'px';
+            yesButton.style.height = (yesButtonSize + 10) + 'px';
 
             // Decrease size of NO button
             noButton.style.width = (noButtonSize - 10) + 'px';
+            noButton.style.height = (noButtonSize - 10) + 'px';
         }
     </script>
 </body>
