@@ -10,14 +10,11 @@
             background-repeat: no-repeat;
             background-size:cover;
             overflow: hidden;
-            margin: 0;
-            padding: 0;
-            font-size: 16px; /* Adjust font size for better readability */
         }
         #container{
-            padding: 25% 10%; /* Adjust padding for centering */
+            padding: 25%;
             text-align: center;
-            font-size: 1.5em; /* Adjust font size for better readability */
+            font-size: 10px;
         }
         .circular-button {
             width: 100px;
@@ -25,39 +22,36 @@
             border-radius: 50%; /* Make the button circular */
             background-color: #fff; /* Button background color */
             color: #ce00b6; /* Button text color */
-            font-size: 1em; /* Adjust font size for better readability */
+            font-size: 18px;
             font-weight: bold;
             text-align: center;
             line-height: 100px; /* Center the text vertically */
             cursor: pointer;
             box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.74);
             margin: 10px;
-            transition: all 0.3s ease; /* Add transition for smooth animation */
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <h3>I WANNA HAVE YOU FOR THE REST OF MY LIFE<br>SAY YES SAY YES</h3>
+        <h1>I WANNA HAVE YOU FOR THE REST OF MY LIFE<br>SAY YES SAY YES</h1>
         <div>
-           <button class="circular-button" onclick="openPage1()">YES</button>
+            <button class="circular-button" onclick="openPage1()">YES</button>
         </div><br>
         <div>
-            <button class="circular-button" onclick="increaseSize()">NO</button>
+            <button class="circular-button" onclick="increaseButtonSize()">NO</button>
         </div>
     </div>
     <script>
         function openPage1() {
-            window.location.href = 'index.html';
+            window.location.href = 'thanx.html';
         }
-
-        function increaseSize() {
-            var yesButton = document.querySelector('.circular-button');
-            var currentSize = window.getComputedStyle(yesButton).getPropertyValue('width');
-            currentSize = parseInt(currentSize.replace('px', '')); // Remove 'px' and convert to integer
-            var newSize = currentSize + 10; // Increase size by 10 pixels
-            yesButton.style.width = newSize + 'px';
-            yesButton.style.height = newSize + 'px';
+        function increaseButtonSize() {
+            var button = document.querySelector('.circular-button');
+            var currentSize = parseInt(window.getComputedStyle(button).getPropertyValue('width'));
+            var newSize = currentSize + 10; // Increase size by 10px
+            button.style.width = newSize + 'px';
+            button.style.height = newSize + 'px';
         }
     </script>
 </body>
