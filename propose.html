@@ -81,8 +81,34 @@
         <button onclick="openPage()"><---TOUCH ME---></button><br>
     </div>
     
-
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var textElement = document.getElementById('gradualText');
+            var text = textElement.textContent;
+            var letters = text.split('');
+            textElement.textContent = '';
+
+            // Add span elements for each letter
+            letters.forEach(function(letter) {
+                var span = document.createElement('span');
+                span.textContent = letter;
+                span.style.opacity = '0';
+                textElement.appendChild(span);
+            });
+
+            // Animate the appearance of each letter
+            var spans = textElement.querySelectorAll('span');
+            var index = 0;
+            var intervalId = setInterval(function() {
+                if (index < spans.length) {
+                    spans[index].style.opacity = '1';
+                    index++;
+                } else {
+                    clearInterval(intervalId); // Stop the animation when all letters are shown
+                }
+            }, 50); // Interval for gradual appearance (adjust as needed)
+        });
+
         function openPage() {
             window.location.href = 'ask.html';
         }
