@@ -19,22 +19,34 @@
         }
 
         .circular-button {
-            width: 80px; /* Adjust button size for mobile */
-            height: 80px; /* Adjust button size for mobile */
+            width: 120px; /* Increase button size */
+            height: 120px; /* Increase button size */
             border-radius: 50%; /* Make the button circular */
             background-color: #fff; /* Button background color */
             color: #ce00b6; /* Button text color */
-            font-size: 14px; /* Adjust font size for mobile */
+            font-size: 16px; /* Adjust font size */
             font-weight: bold;
             text-align: center;
-            line-height: 80px; /* Center the text vertically */
+            line-height: 120px; /* Center the text vertically */
             cursor: pointer;
             box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.74);
+            position: relative; /* Position the GIF image relative to the button */
+        }
+
+        .gif-img {
+            position: absolute; /* Position the GIF image absolutely */
+            top: 50%; /* Align the GIF image to the center vertically */
+            left: 50%; /* Align the GIF image to the center horizontally */
+            transform: translate(-50%, -50%); /* Center the GIF image */
+            width: 60%; /* Adjust the width of the GIF image */
+            height: auto; /* Maintain aspect ratio of the GIF image */
         }
     </style>
 </head>
 <body>
-    <button class="circular-button" onclick="openPage()">Click Me</button>
+    <button class="circular-button" onclick="openPage()">Click Me
+        <img class="gif-img" src="your-gif.gif" alt="GIF Image"> <!-- GIF image -->
+    </button>
     <script>
         function openPage() {
             window.location.href = 'propose.html';
